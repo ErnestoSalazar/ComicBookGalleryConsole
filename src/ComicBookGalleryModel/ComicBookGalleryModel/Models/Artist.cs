@@ -21,6 +21,6 @@ namespace ComicBookGalleryModel.Models
         //[NotMapped] // EF will ignore this set property when generating the in memory representation of the model
         //public string Test { get; set; }
 
-        public ICollection<ComicBookArtist> ComicBooks { get; set; }
+        public ICollection<ComicBookArtist> ComicBooks { get; set; } // we define that this entity objet has many ComicBooks
     }
 }
