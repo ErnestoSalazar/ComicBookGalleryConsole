@@ -22,7 +22,8 @@ namespace ComicBookGalleryModel
         public Context()
         {
             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
-            Database.SetInitializer(new DropCreateDatabaseAlways<Context>());
+            //Database.SetInitializer(new DropCreateDatabaseAlways<Context>());
+            Database.SetInitializer(new DatabaseInitializer());
         }
 
 
@@ -36,7 +37,7 @@ namespace ComicBookGalleryModel
             //modelBuilder.Conventions.Add(new DecimalPropertyConvention(5, 2));
 
             modelBuilder.Entity<ComicBook>()
-                .Property(cb => cb.AvarageRating)
+                .Property(cb => cb.AverageRating)
                 .HasPrecision(5,2);
         }
     }

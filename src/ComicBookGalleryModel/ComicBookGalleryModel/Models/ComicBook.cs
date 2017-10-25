@@ -21,8 +21,8 @@ namespace ComicBookGalleryModel.Models
         public int IssueNumber { get; set; }
         public string Description { get; set; }
         public DateTime PublishedOn { get; set; }
-        public decimal? AvarageRating { get; set; } // '?' makes prop to be nullable, making DB table add a null allowed column
-
+        public decimal? AverageRating { get; set; } // '?' makes prop to be nullable, making DB table add a null allowed column
+        
         public Series Series { get; set; } // Many-to-One relationship
 
         public ICollection<ComicBookArtist> Artists { get; set; } // we define that this entity objet has many Artists
