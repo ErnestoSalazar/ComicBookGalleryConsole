@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace ComicBookGalleryModel.Models
         // the data for the series entity to be stored in its own table
         // if not, EF would treat Series class as a complex type
         public int Id { get; set; }
+        [Required, StringLength(200)]
         public string Title { get; set; }
         public string Description { get; set; }
 
